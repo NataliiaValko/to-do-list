@@ -1,0 +1,101 @@
+#task__list {
+  list-style: none;
+
+  font-size: 28px;
+}
+
+.text-thumb {
+  position: relative;
+  display: inline-block;
+}
+.text {
+  display: inline-block;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.text__edit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  font-size: 28px;
+  z-index: 1;
+  width: 100%;
+  min-width: 200px;
+  background: rgb(255, 255, 230);
+}
+
+.text__edit--visible {
+  display: inline-block;
+}
+
+.text--done {
+  text-decoration: line-through;
+  font-size: 18px;
+}
+
+.buttons__list {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: -3px;
+}
+
+.buttons__item {
+  margin: 3px;
+}
+
+.delete {
+  position: relative;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.edit {
+  position: relative;
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.copy {
+  position: relative;
+  color: grey;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.delete:hover,
+.edit:hover,
+.copy:hover,
+.copy:focus,
+.delete:focus,
+.edit:focus {
+  font-size: 20px;
+}
+
+.edit:hover::after,
+.delete:hover::after,
+.copy:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 80%;
+  top: 100%;
+  z-index: 1;
+  background: rgba(255, 255, 230, 0.9);
+  font-size: 11px;
+  padding: 5px 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
